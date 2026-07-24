@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lightning Analysis Report</title></head>
+<body>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f9f9f9; color: #2c3e50; }
+        h2 { border-bottom: 2px solid #34495e; padding-bottom: 5px; margin-top: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #dddddd; text-align: center; padding: 12px 10px; }
+        th { background-color: #34495e; color: white; font-weight: bold; }
+        
+        .table tr:last-child td { background-color: #e2f0d9 !important; font-weight: bold; } 
+        .table td:last-child { background-color: #fce4d6 !important; font-weight: bold; } 
+        .table tr:last-child td:last-child { background-color: #fff2cc !important; } 
+        
+        #nativeLogTable th { background-color: #2980b9 !important; color: white !important; }
+        #nativeLogTable tr:nth-child(even) { background-color: #f2f2f2; }
+        #nativeLogTable tr:hover { background-color: #e8f4f8; }
+    </style>
+    <h2>Total Lightning Strikes (&le; 5 Miles Proximity)</h2>
+<style type="text/css">
+#T_ebd13_row0_col3, #T_ebd13_row0_col4, #T_ebd13_row0_col7, #T_ebd13_row0_col9, #T_ebd13_row1_col2, #T_ebd13_row1_col3, #T_ebd13_row1_col9, #T_ebd13_row2_col0, #T_ebd13_row2_col3, #T_ebd13_row2_col8, #T_ebd13_row2_col11, #T_ebd13_row3_col3, #T_ebd13_row4_col2, #T_ebd13_row4_col4, #T_ebd13_row4_col5, #T_ebd13_row4_col8, #T_ebd13_row5_col2, #T_ebd13_row5_col5, #T_ebd13_row6_col0, #T_ebd13_row6_col2, #T_ebd13_row6_col3, #T_ebd13_row6_col9 {
+  background-color: rgba(230, 126, 34, 0.00);
+  color: #111;
+}
+#T_ebd13_row0_col5, #T_ebd13_row0_col8, #T_ebd13_row0_col10, #T_ebd13_row4_col6, #T_ebd13_row6_col10 {
+  background-color: rgba(230, 126, 34, 0.01);
+  color: #111;
+}
+#T_ebd13_row0_col6, #T_ebd13_row3_col7, #T_ebd13_row6_col4 {
+  background-color: rgba(230, 126, 34, 0.10);
+  color: #111;
+}
+#T_ebd13_row0_col12, #T_ebd13_row5_col12 {
+  background-color: rgba(230, 126, 34, 0.14);
+  color: #111;
+}
+#T_ebd13_row1_col4, #T_ebd13_row3_col4 {
+  background-color: rgba(230, 126, 34, 0.02);
+  color: #111;
+}
+#T_ebd13_row1_col5, #T_ebd13_row1_col8 {
+  background-color: rgba(230, 126, 34, 0.06);
+  color: #111;
+}
+#T_ebd13_row1_col6 {
+  background-color: rgba(230, 126, 34, 0.75);
+  color: #111;
+}
+#T_ebd13_row1_col7, #T_ebd13_row3_col5, #T_ebd13_row3_col6, #T_ebd13_row3_col11, #T_ebd13_row6_col11 {
+  background-color: rgba(230, 126, 34, 0.04);
+  color: #111;
+}
+#T_ebd13_row1_col12 {
+  background-color: rgba(230, 126, 34, 0.93);
+  color: #111;
+}
+#T_ebd13_row2_col5, #T_ebd13_row6_col8 {
+  background-color: rgba(230, 126, 34, 0.07);
+  color: #111;
+}
+#T_ebd13_row2_col6, #T_ebd13_row4_col12, #T_ebd13_row5_col4 {
+  background-color: rgba(230, 126, 34, 0.05);
+  color: #111;
+}
+#T_ebd13_row2_col7 {
+  background-color: rgba(230, 126, 34, 0.13);
+  color: #111;
+}
+#T_ebd13_row2_col12 {
+  background-color: rgba(230, 126, 34, 0.26);
+  color: #111;
+}
+#T_ebd13_row3_col12 {
+  background-color: rgba(230, 126, 34, 0.24);
+  color: #111;
+}
+#T_ebd13_row4_col7 {
+  background-color: rgba(230, 126, 34, 0.03);
+  color: #111;
+}
+#T_ebd13_row5_col6 {
+  background-color: rgba(230, 126, 34, 0.09);
+  color: #111;
+}
+#T_ebd13_row6_col5 {
+  background-color: rgba(230, 126, 34, 0.18);
+  color: #111;
+}
+#T_ebd13_row6_col6 {
+  background-color: rgba(230, 126, 34, 1.04);
+  color: #111;
+}
+#T_ebd13_row6_col7 {
+  background-color: rgba(230, 126, 34, 0.30);
+  color: #111;
+}
+#T_ebd13_row6_col12 {
+  background-color: rgba(230, 126, 34, 1.75);
+  color: #111;
+}
+</style>
+<table id="T_ebd13">
+  <thead>
+    <tr>
+      <th class="index_name level0" >month_name</th>
+      <th id="T_ebd13_level0_col0" class="col_heading level0 col0" >January</th>
+      <th id="T_ebd13_level0_col1" class="col_heading level0 col1" >February</th>
+      <th id="T_ebd13_level0_col2" class="col_heading level0 col2" >March</th>
+      <th id="T_ebd13_level0_col3" class="col_heading level0 col3" >April</th>
+      <th id="T_ebd13_level0_col4" class="col_heading level0 col4" >May</th>
+      <th id="T_ebd13_level0_col5" class="col_heading level0 col5" >June</th>
+      <th id="T_ebd13_level0_col6" class="col_heading level0 col6" >July</th>
+      <th id="T_ebd13_level0_col7" class="col_heading level0 col7" >August</th>
+      <th id="T_ebd13_level0_col8" class="col_heading level0 col8" >September</th>
+      <th id="T_ebd13_level0_col9" class="col_heading level0 col9" >October</th>
+      <th id="T_ebd13_level0_col10" class="col_heading level0 col10" >November</th>
+      <th id="T_ebd13_level0_col11" class="col_heading level0 col11" >December</th>
+      <th id="T_ebd13_level0_col12" class="col_heading level0 col12" >Total</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >year</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+      <th class="blank col10" >&nbsp;</th>
+      <th class="blank col11" >&nbsp;</th>
+      <th class="blank col12" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_ebd13_level0_row0" class="row_heading level0 row0" >2021</th>
+      <td id="T_ebd13_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_ebd13_row0_col1" class="data row0 col1" >0</td>
+      <td id="T_ebd13_row0_col2" class="data row0 col2" >0</td>
+      <td id="T_ebd13_row0_col3" class="data row0 col3" >36</td>
+      <td id="T_ebd13_row0_col4" class="data row0 col4" >45</td>
+      <td id="T_ebd13_row0_col5" class="data row0 col5" >119</td>
+      <td id="T_ebd13_row0_col6" class="data row0 col6" >944</td>
+      <td id="T_ebd13_row0_col7" class="data row0 col7" >6</td>
+      <td id="T_ebd13_row0_col8" class="data row0 col8" >103</td>
+      <td id="T_ebd13_row0_col9" class="data row0 col9" >1</td>
+      <td id="T_ebd13_row0_col10" class="data row0 col10" >86</td>
+      <td id="T_ebd13_row0_col11" class="data row0 col11" >0</td>
+      <td id="T_ebd13_row0_col12" class="data row0 col12" >1340</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row1" class="row_heading level0 row1" >2022</th>
+      <td id="T_ebd13_row1_col0" class="data row1 col0" >0</td>
+      <td id="T_ebd13_row1_col1" class="data row1 col1" >0</td>
+      <td id="T_ebd13_row1_col2" class="data row1 col2" >32</td>
+      <td id="T_ebd13_row1_col3" class="data row1 col3" >1</td>
+      <td id="T_ebd13_row1_col4" class="data row1 col4" >186</td>
+      <td id="T_ebd13_row1_col5" class="data row1 col5" >541</td>
+      <td id="T_ebd13_row1_col6" class="data row1 col6" >7199</td>
+      <td id="T_ebd13_row1_col7" class="data row1 col7" >376</td>
+      <td id="T_ebd13_row1_col8" class="data row1 col8" >549</td>
+      <td id="T_ebd13_row1_col9" class="data row1 col9" >7</td>
+      <td id="T_ebd13_row1_col10" class="data row1 col10" >0</td>
+      <td id="T_ebd13_row1_col11" class="data row1 col11" >0</td>
+      <td id="T_ebd13_row1_col12" class="data row1 col12" >8891</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row2" class="row_heading level0 row2" >2023</th>
+      <td id="T_ebd13_row2_col0" class="data row2 col0" >5</td>
+      <td id="T_ebd13_row2_col1" class="data row2 col1" >0</td>
+      <td id="T_ebd13_row2_col2" class="data row2 col2" >0</td>
+      <td id="T_ebd13_row2_col3" class="data row2 col3" >6</td>
+      <td id="T_ebd13_row2_col4" class="data row2 col4" >0</td>
+      <td id="T_ebd13_row2_col5" class="data row2 col5" >675</td>
+      <td id="T_ebd13_row2_col6" class="data row2 col6" >478</td>
+      <td id="T_ebd13_row2_col7" class="data row2 col7" >1282</td>
+      <td id="T_ebd13_row2_col8" class="data row2 col8" >24</td>
+      <td id="T_ebd13_row2_col9" class="data row2 col9" >0</td>
+      <td id="T_ebd13_row2_col10" class="data row2 col10" >0</td>
+      <td id="T_ebd13_row2_col11" class="data row2 col11" >1</td>
+      <td id="T_ebd13_row2_col12" class="data row2 col12" >2471</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row3" class="row_heading level0 row3" >2024</th>
+      <td id="T_ebd13_row3_col0" class="data row3 col0" >0</td>
+      <td id="T_ebd13_row3_col1" class="data row3 col1" >0</td>
+      <td id="T_ebd13_row3_col2" class="data row3 col2" >0</td>
+      <td id="T_ebd13_row3_col3" class="data row3 col3" >3</td>
+      <td id="T_ebd13_row3_col4" class="data row3 col4" >230</td>
+      <td id="T_ebd13_row3_col5" class="data row3 col5" >356</td>
+      <td id="T_ebd13_row3_col6" class="data row3 col6" >410</td>
+      <td id="T_ebd13_row3_col7" class="data row3 col7" >919</td>
+      <td id="T_ebd13_row3_col8" class="data row3 col8" >0</td>
+      <td id="T_ebd13_row3_col9" class="data row3 col9" >0</td>
+      <td id="T_ebd13_row3_col10" class="data row3 col10" >0</td>
+      <td id="T_ebd13_row3_col11" class="data row3 col11" >384</td>
+      <td id="T_ebd13_row3_col12" class="data row3 col12" >2302</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row4" class="row_heading level0 row4" >2025</th>
+      <td id="T_ebd13_row4_col0" class="data row4 col0" >0</td>
+      <td id="T_ebd13_row4_col1" class="data row4 col1" >0</td>
+      <td id="T_ebd13_row4_col2" class="data row4 col2" >3</td>
+      <td id="T_ebd13_row4_col3" class="data row4 col3" >0</td>
+      <td id="T_ebd13_row4_col4" class="data row4 col4" >7</td>
+      <td id="T_ebd13_row4_col5" class="data row4 col5" >9</td>
+      <td id="T_ebd13_row4_col6" class="data row4 col6" >118</td>
+      <td id="T_ebd13_row4_col7" class="data row4 col7" >323</td>
+      <td id="T_ebd13_row4_col8" class="data row4 col8" >7</td>
+      <td id="T_ebd13_row4_col9" class="data row4 col9" >0</td>
+      <td id="T_ebd13_row4_col10" class="data row4 col10" >0</td>
+      <td id="T_ebd13_row4_col11" class="data row4 col11" >0</td>
+      <td id="T_ebd13_row4_col12" class="data row4 col12" >467</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row5" class="row_heading level0 row5" >2026</th>
+      <td id="T_ebd13_row5_col0" class="data row5 col0" >0</td>
+      <td id="T_ebd13_row5_col1" class="data row5 col1" >0</td>
+      <td id="T_ebd13_row5_col2" class="data row5 col2" >3</td>
+      <td id="T_ebd13_row5_col3" class="data row5 col3" >0</td>
+      <td id="T_ebd13_row5_col4" class="data row5 col4" >518</td>
+      <td id="T_ebd13_row5_col5" class="data row5 col5" >18</td>
+      <td id="T_ebd13_row5_col6" class="data row5 col6" >830</td>
+      <td id="T_ebd13_row5_col7" class="data row5 col7" >0</td>
+      <td id="T_ebd13_row5_col8" class="data row5 col8" >0</td>
+      <td id="T_ebd13_row5_col9" class="data row5 col9" >0</td>
+      <td id="T_ebd13_row5_col10" class="data row5 col10" >0</td>
+      <td id="T_ebd13_row5_col11" class="data row5 col11" >0</td>
+      <td id="T_ebd13_row5_col12" class="data row5 col12" >1369</td>
+    </tr>
+    <tr>
+      <th id="T_ebd13_level0_row6" class="row_heading level0 row6" >Total</th>
+      <td id="T_ebd13_row6_col0" class="data row6 col0" >5</td>
+      <td id="T_ebd13_row6_col1" class="data row6 col1" >0</td>
+      <td id="T_ebd13_row6_col2" class="data row6 col2" >38</td>
+      <td id="T_ebd13_row6_col3" class="data row6 col3" >46</td>
+      <td id="T_ebd13_row6_col4" class="data row6 col4" >986</td>
+      <td id="T_ebd13_row6_col5" class="data row6 col5" >1718</td>
+      <td id="T_ebd13_row6_col6" class="data row6 col6" >9979</td>
+      <td id="T_ebd13_row6_col7" class="data row6 col7" >2906</td>
+      <td id="T_ebd13_row6_col8" class="data row6 col8" >683</td>
+      <td id="T_ebd13_row6_col9" class="data row6 col9" >8</td>
+      <td id="T_ebd13_row6_col10" class="data row6 col10" >86</td>
+      <td id="T_ebd13_row6_col11" class="data row6 col11" >385</td>
+      <td id="T_ebd13_row6_col12" class="data row6 col12" >16840</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Thunderstorm Days Grid (&le; 5 Miles Proximity)</h2>
+<style type="text/css">
+#T_533c2_row0_col3, #T_533c2_row0_col7, #T_533c2_row0_col9, #T_533c2_row0_col10, #T_533c2_row1_col3, #T_533c2_row1_col9, #T_533c2_row2_col0, #T_533c2_row2_col3, #T_533c2_row2_col8, #T_533c2_row2_col11, #T_533c2_row3_col11, #T_533c2_row4_col2, #T_533c2_row4_col4, #T_533c2_row4_col8, #T_533c2_row5_col2, #T_533c2_row5_col4, #T_533c2_row6_col0, #T_533c2_row6_col10 {
+  background-color: rgba(230, 126, 34, 0.09);
+  color: #111;
+}
+#T_533c2_row0_col4, #T_533c2_row0_col5, #T_533c2_row0_col8, #T_533c2_row1_col2, #T_533c2_row1_col4, #T_533c2_row1_col5, #T_533c2_row1_col8, #T_533c2_row2_col7, #T_533c2_row3_col4, #T_533c2_row3_col6, #T_533c2_row5_col5 {
+  background-color: rgba(230, 126, 34, 0.28);
+  color: #111;
+}
+#T_533c2_row0_col6, #T_533c2_row2_col5, #T_533c2_row3_col7 {
+  background-color: rgba(230, 126, 34, 0.56);
+  color: #111;
+}
+#T_533c2_row0_col12 {
+  background-color: rgba(230, 126, 34, 1.78);
+  color: #111;
+}
+#T_533c2_row1_col6 {
+  background-color: rgba(230, 126, 34, 0.38);
+  color: #111;
+}
+#T_533c2_row1_col7, #T_533c2_row3_col3, #T_533c2_row4_col5, #T_533c2_row4_col7, #T_533c2_row6_col9, #T_533c2_row6_col11 {
+  background-color: rgba(230, 126, 34, 0.19);
+  color: #111;
+}
+#T_533c2_row1_col12, #T_533c2_row3_col12 {
+  background-color: rgba(230, 126, 34, 1.88);
+  color: #111;
+}
+#T_533c2_row2_col6, #T_533c2_row6_col8 {
+  background-color: rgba(230, 126, 34, 0.75);
+  color: #111;
+}
+#T_533c2_row2_col12 {
+  background-color: rgba(230, 126, 34, 1.97);
+  color: #111;
+}
+#T_533c2_row3_col5, #T_533c2_row5_col6, #T_533c2_row6_col2, #T_533c2_row6_col3 {
+  background-color: rgba(230, 126, 34, 0.47);
+  color: #111;
+}
+#T_533c2_row4_col6 {
+  background-color: rgba(230, 126, 34, 0.66);
+  color: #111;
+}
+#T_533c2_row4_col12, #T_533c2_row6_col7 {
+  background-color: rgba(230, 126, 34, 1.31);
+  color: #111;
+}
+#T_533c2_row5_col12 {
+  background-color: rgba(230, 126, 34, 0.94);
+  color: #111;
+}
+#T_533c2_row6_col4 {
+  background-color: rgba(230, 126, 34, 1.03);
+  color: #111;
+}
+#T_533c2_row6_col5 {
+  background-color: rgba(230, 126, 34, 2.06);
+  color: #111;
+}
+#T_533c2_row6_col6 {
+  background-color: rgba(230, 126, 34, 3.09);
+  color: #111;
+}
+#T_533c2_row6_col12 {
+  background-color: rgba(230, 126, 34, 9.75);
+  color: #111;
+}
+</style>
+<table id="T_533c2">
+  <thead>
+    <tr>
+      <th class="index_name level0" >month_name</th>
+      <th id="T_533c2_level0_col0" class="col_heading level0 col0" >January</th>
+      <th id="T_533c2_level0_col1" class="col_heading level0 col1" >February</th>
+      <th id="T_533c2_level0_col2" class="col_heading level0 col2" >March</th>
+      <th id="T_533c2_level0_col3" class="col_heading level0 col3" >April</th>
+      <th id="T_533c2_level0_col4" class="col_heading level0 col4" >May</th>
+      <th id="T_533c2_level0_col5" class="col_heading level0 col5" >June</th>
+      <th id="T_533c2_level0_col6" class="col_heading level0 col6" >July</th>
+      <th id="T_533c2_level0_col7" class="col_heading level0 col7" >August</th>
+      <th id="T_533c2_level0_col8" class="col_heading level0 col8" >September</th>
+      <th id="T_533c2_level0_col9" class="col_heading level0 col9" >October</th>
+      <th id="T_533c2_level0_col10" class="col_heading level0 col10" >November</th>
+      <th id="T_533c2_level0_col11" class="col_heading level0 col11" >December</th>
+      <th id="T_533c2_level0_col12" class="col_heading level0 col12" >Total</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >year</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+      <th class="blank col6" >&nbsp;</th>
+      <th class="blank col7" >&nbsp;</th>
+      <th class="blank col8" >&nbsp;</th>
+      <th class="blank col9" >&nbsp;</th>
+      <th class="blank col10" >&nbsp;</th>
+      <th class="blank col11" >&nbsp;</th>
+      <th class="blank col12" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_533c2_level0_row0" class="row_heading level0 row0" >2021</th>
+      <td id="T_533c2_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_533c2_row0_col1" class="data row0 col1" >0</td>
+      <td id="T_533c2_row0_col2" class="data row0 col2" >0</td>
+      <td id="T_533c2_row0_col3" class="data row0 col3" >1</td>
+      <td id="T_533c2_row0_col4" class="data row0 col4" >3</td>
+      <td id="T_533c2_row0_col5" class="data row0 col5" >3</td>
+      <td id="T_533c2_row0_col6" class="data row0 col6" >6</td>
+      <td id="T_533c2_row0_col7" class="data row0 col7" >1</td>
+      <td id="T_533c2_row0_col8" class="data row0 col8" >3</td>
+      <td id="T_533c2_row0_col9" class="data row0 col9" >1</td>
+      <td id="T_533c2_row0_col10" class="data row0 col10" >1</td>
+      <td id="T_533c2_row0_col11" class="data row0 col11" >0</td>
+      <td id="T_533c2_row0_col12" class="data row0 col12" >19</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row1" class="row_heading level0 row1" >2022</th>
+      <td id="T_533c2_row1_col0" class="data row1 col0" >0</td>
+      <td id="T_533c2_row1_col1" class="data row1 col1" >0</td>
+      <td id="T_533c2_row1_col2" class="data row1 col2" >3</td>
+      <td id="T_533c2_row1_col3" class="data row1 col3" >1</td>
+      <td id="T_533c2_row1_col4" class="data row1 col4" >3</td>
+      <td id="T_533c2_row1_col5" class="data row1 col5" >3</td>
+      <td id="T_533c2_row1_col6" class="data row1 col6" >4</td>
+      <td id="T_533c2_row1_col7" class="data row1 col7" >2</td>
+      <td id="T_533c2_row1_col8" class="data row1 col8" >3</td>
+      <td id="T_533c2_row1_col9" class="data row1 col9" >1</td>
+      <td id="T_533c2_row1_col10" class="data row1 col10" >0</td>
+      <td id="T_533c2_row1_col11" class="data row1 col11" >0</td>
+      <td id="T_533c2_row1_col12" class="data row1 col12" >20</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row2" class="row_heading level0 row2" >2023</th>
+      <td id="T_533c2_row2_col0" class="data row2 col0" >1</td>
+      <td id="T_533c2_row2_col1" class="data row2 col1" >0</td>
+      <td id="T_533c2_row2_col2" class="data row2 col2" >0</td>
+      <td id="T_533c2_row2_col3" class="data row2 col3" >1</td>
+      <td id="T_533c2_row2_col4" class="data row2 col4" >0</td>
+      <td id="T_533c2_row2_col5" class="data row2 col5" >6</td>
+      <td id="T_533c2_row2_col6" class="data row2 col6" >8</td>
+      <td id="T_533c2_row2_col7" class="data row2 col7" >3</td>
+      <td id="T_533c2_row2_col8" class="data row2 col8" >1</td>
+      <td id="T_533c2_row2_col9" class="data row2 col9" >0</td>
+      <td id="T_533c2_row2_col10" class="data row2 col10" >0</td>
+      <td id="T_533c2_row2_col11" class="data row2 col11" >1</td>
+      <td id="T_533c2_row2_col12" class="data row2 col12" >21</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row3" class="row_heading level0 row3" >2024</th>
+      <td id="T_533c2_row3_col0" class="data row3 col0" >0</td>
+      <td id="T_533c2_row3_col1" class="data row3 col1" >0</td>
+      <td id="T_533c2_row3_col2" class="data row3 col2" >0</td>
+      <td id="T_533c2_row3_col3" class="data row3 col3" >2</td>
+      <td id="T_533c2_row3_col4" class="data row3 col4" >3</td>
+      <td id="T_533c2_row3_col5" class="data row3 col5" >5</td>
+      <td id="T_533c2_row3_col6" class="data row3 col6" >3</td>
+      <td id="T_533c2_row3_col7" class="data row3 col7" >6</td>
+      <td id="T_533c2_row3_col8" class="data row3 col8" >0</td>
+      <td id="T_533c2_row3_col9" class="data row3 col9" >0</td>
+      <td id="T_533c2_row3_col10" class="data row3 col10" >0</td>
+      <td id="T_533c2_row3_col11" class="data row3 col11" >1</td>
+      <td id="T_533c2_row3_col12" class="data row3 col12" >20</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row4" class="row_heading level0 row4" >2025</th>
+      <td id="T_533c2_row4_col0" class="data row4 col0" >0</td>
+      <td id="T_533c2_row4_col1" class="data row4 col1" >0</td>
+      <td id="T_533c2_row4_col2" class="data row4 col2" >1</td>
+      <td id="T_533c2_row4_col3" class="data row4 col3" >0</td>
+      <td id="T_533c2_row4_col4" class="data row4 col4" >1</td>
+      <td id="T_533c2_row4_col5" class="data row4 col5" >2</td>
+      <td id="T_533c2_row4_col6" class="data row4 col6" >7</td>
+      <td id="T_533c2_row4_col7" class="data row4 col7" >2</td>
+      <td id="T_533c2_row4_col8" class="data row4 col8" >1</td>
+      <td id="T_533c2_row4_col9" class="data row4 col9" >0</td>
+      <td id="T_533c2_row4_col10" class="data row4 col10" >0</td>
+      <td id="T_533c2_row4_col11" class="data row4 col11" >0</td>
+      <td id="T_533c2_row4_col12" class="data row4 col12" >14</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row5" class="row_heading level0 row5" >2026</th>
+      <td id="T_533c2_row5_col0" class="data row5 col0" >0</td>
+      <td id="T_533c2_row5_col1" class="data row5 col1" >0</td>
+      <td id="T_533c2_row5_col2" class="data row5 col2" >1</td>
+      <td id="T_533c2_row5_col3" class="data row5 col3" >0</td>
+      <td id="T_533c2_row5_col4" class="data row5 col4" >1</td>
+      <td id="T_533c2_row5_col5" class="data row5 col5" >3</td>
+      <td id="T_533c2_row5_col6" class="data row5 col6" >5</td>
+      <td id="T_533c2_row5_col7" class="data row5 col7" >0</td>
+      <td id="T_533c2_row5_col8" class="data row5 col8" >0</td>
+      <td id="T_533c2_row5_col9" class="data row5 col9" >0</td>
+      <td id="T_533c2_row5_col10" class="data row5 col10" >0</td>
+      <td id="T_533c2_row5_col11" class="data row5 col11" >0</td>
+      <td id="T_533c2_row5_col12" class="data row5 col12" >10</td>
+    </tr>
+    <tr>
+      <th id="T_533c2_level0_row6" class="row_heading level0 row6" >Total</th>
+      <td id="T_533c2_row6_col0" class="data row6 col0" >1</td>
+      <td id="T_533c2_row6_col1" class="data row6 col1" >0</td>
+      <td id="T_533c2_row6_col2" class="data row6 col2" >5</td>
+      <td id="T_533c2_row6_col3" class="data row6 col3" >5</td>
+      <td id="T_533c2_row6_col4" class="data row6 col4" >11</td>
+      <td id="T_533c2_row6_col5" class="data row6 col5" >22</td>
+      <td id="T_533c2_row6_col6" class="data row6 col6" >33</td>
+      <td id="T_533c2_row6_col7" class="data row6 col7" >14</td>
+      <td id="T_533c2_row6_col8" class="data row6 col8" >8</td>
+      <td id="T_533c2_row6_col9" class="data row6 col9" >2</td>
+      <td id="T_533c2_row6_col10" class="data row6 col10" >1</td>
+      <td id="T_533c2_row6_col11" class="data row6 col11" >2</td>
+      <td id="T_533c2_row6_col12" class="data row6 col12" >104</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Chronological Log of Thunderstorm Days</h2>
+
+    <div style="background: white; padding: 20px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px; display: flex; gap: 20px; align-items: center;">
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">Sort Columns By:</label>
+            <select id="sortColumn" onchange="sortNativeTable()" style="padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+                <option value="0">Date (Most Recent First)</option>
+                <option value="0_asc">Date (Oldest First)</option>
+                <option value="1_desc">Strikes Detected (Highest First)</option>
+                <option value="1_asc">Strikes Detected (Lowest First)</option>
+                <option value="2_asc">Closest Approach (Nearest First)</option>
+                <option value="2_desc">Closest Approach (Farthest First)</option>
+            </select>
+        </div>
+        <div>
+            <label style="font-weight: bold; margin-right: 5px;">Live Search Date Filter:</label>
+            <input type="text" id="nativeSearch" onkeyup="filterNativeTable()" placeholder="Type a Year or Month..." style="padding: 6px; width: 220px; border-radius: 4px; border: 1px solid #ccc;">
+        </div>
+    </div>
+    
+    <script>
+    function sortNativeTable() {
+        var select = document.getElementById("sortColumn");
+        var val = select.value;
+        var colIndex = parseInt(val.split("_")[0]);
+        var direction = val.includes("asc") ? "asc" : "desc";
+        
+        var table = document.getElementById("nativeLogTable").getElementsByTagName('tbody')[0];
+        var rows = Array.from(table.rows);
+        
+        rows.sort(function(a, b) {
+            var cellA = a.cells[colIndex].innerText.strip ? a.cells[colIndex].innerText.strip() : a.cells[colIndex].innerText;
+            var cellB = b.cells[colIndex].innerText.strip ? b.cells[colIndex].innerText.strip() : b.cells[colIndex].innerText;
+            
+            // Numeric parsing logic for columns 1 and 2
+            if (colIndex > 0) {
+                return direction === "asc" ? parseFloat(cellA) - parseFloat(cellB) : parseFloat(cellB) - parseFloat(cellA);
+            }
+            // Fallback plain-string date sorting rule
+            return direction === "asc" ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+        });
+        
+        rows.forEach(row => table.appendChild(row));
+    }
+
+    function filterNativeTable() {
+        var input = document.getElementById("nativeSearch").value.toLowerCase();
+        var table = document.getElementById("nativeLogTable").getElementsByTagName('tbody')[0];
+        var rows = table.rows;
+        
+        for (var i = 0; i < rows.length; i++) {
+            var dateCell = rows[i].cells[0].innerText.toLowerCase();
+            rows[i].style.display = dateCell.includes(input) ? "" : "none";
+        }
+    }
+    </script>
+    <table border="1" class="dataframe" id="nativeLogTable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Strikes Detected (&lt;= 5 mi)</th>
+      <th>Closest Approach (Miles)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-07-21</td>
+      <td>2.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2026-07-18</td>
+      <td>451.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2026-07-06</td>
+      <td>7.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2026-07-04</td>
+      <td>7.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2026-07-01</td>
+      <td>363.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2026-06-12</td>
+      <td>5.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2026-06-07</td>
+      <td>4.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2026-06-06</td>
+      <td>9.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2026-05-20</td>
+      <td>518.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2026-03-12</td>
+      <td>3.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2025-09-05</td>
+      <td>7.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2025-08-17</td>
+      <td>2.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2025-08-13</td>
+      <td>321.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-07-31</td>
+      <td>22.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-07-30</td>
+      <td>26.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-07-25</td>
+      <td>18.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2025-07-14</td>
+      <td>12.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-07-08</td>
+      <td>2.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2025-07-03</td>
+      <td>5.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-07-01</td>
+      <td>33.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2025-06-19</td>
+      <td>8.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2025-06-07</td>
+      <td>1.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2025-05-02</td>
+      <td>7.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2025-03-26</td>
+      <td>3.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2024-12-31</td>
+      <td>384.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-08-26</td>
+      <td>11.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2024-08-19</td>
+      <td>272.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-08-18</td>
+      <td>193.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2024-08-06</td>
+      <td>47.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2024-08-03</td>
+      <td>386.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-08-02</td>
+      <td>10.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2024-07-29</td>
+      <td>28.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2024-07-17</td>
+      <td>375.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-07-12</td>
+      <td>7.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2024-06-30</td>
+      <td>66.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-06-27</td>
+      <td>82.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2024-06-26</td>
+      <td>26.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-06-22</td>
+      <td>116.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2024-06-14</td>
+      <td>66.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-05-27</td>
+      <td>49.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-05-23</td>
+      <td>141.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2024-05-08</td>
+      <td>40.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2024-04-12</td>
+      <td>1.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2024-04-03</td>
+      <td>2.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2023-12-10</td>
+      <td>1.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2023-09-11</td>
+      <td>24.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2023-08-18</td>
+      <td>149.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2023-08-15</td>
+      <td>52.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2023-08-13</td>
+      <td>1081.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2023-07-29</td>
+      <td>76.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2023-07-27</td>
+      <td>216.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2023-07-25</td>
+      <td>2.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2023-07-21</td>
+      <td>23.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2023-07-18</td>
+      <td>35.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2023-07-16</td>
+      <td>43.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2023-07-14</td>
+      <td>77.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2023-07-04</td>
+      <td>6.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2023-06-27</td>
+      <td>3.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>2023-06-17</td>
+      <td>33.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2023-06-16</td>
+      <td>11.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2023-06-14</td>
+      <td>36.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2023-06-06</td>
+      <td>586.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>2023-06-02</td>
+      <td>6.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2023-04-23</td>
+      <td>6.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2023-01-19</td>
+      <td>5.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2022-10-05</td>
+      <td>7.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2022-09-25</td>
+      <td>545.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2022-09-22</td>
+      <td>3.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2022-09-13</td>
+      <td>1.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2022-08-26</td>
+      <td>120.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2022-08-09</td>
+      <td>256.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2022-07-25</td>
+      <td>1853.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>2022-07-21</td>
+      <td>5233.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2022-07-18</td>
+      <td>109.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2022-07-02</td>
+      <td>4.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2022-06-11</td>
+      <td>4.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2022-06-09</td>
+      <td>97.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2022-06-01</td>
+      <td>440.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2022-05-28</td>
+      <td>136.00</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>2022-05-20</td>
+      <td>49.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2022-05-16</td>
+      <td>1.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2022-04-07</td>
+      <td>1.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2022-03-26</td>
+      <td>15.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2022-03-24</td>
+      <td>2.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>2022-03-19</td>
+      <td>15.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-11-13</td>
+      <td>86.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-10-26</td>
+      <td>1.00</td>
+      <td>4.35</td>
+    </tr>
+    <tr>
+      <td>2021-09-23</td>
+      <td>32.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2021-09-13</td>
+      <td>9.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2021-09-01</td>
+      <td>62.00</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <td>2021-08-12</td>
+      <td>6.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2021-07-26</td>
+      <td>286.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-07-21</td>
+      <td>2.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-07-18</td>
+      <td>11.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-07-08</td>
+      <td>419.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-07-06</td>
+      <td>223.00</td>
+      <td>3.11</td>
+    </tr>
+    <tr>
+      <td>2021-07-01</td>
+      <td>3.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2021-06-30</td>
+      <td>64.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-06-08</td>
+      <td>2.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-06-04</td>
+      <td>53.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>2021-05-27</td>
+      <td>2.00</td>
+      <td>3.73</td>
+    </tr>
+    <tr>
+      <td>2021-05-26</td>
+      <td>42.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>2021-05-04</td>
+      <td>1.00</td>
+      <td>2.49</td>
+    </tr>
+    <tr>
+      <td>2021-04-21</td>
+      <td>36.00</td>
+      <td>0.62</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
